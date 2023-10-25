@@ -1,0 +1,226 @@
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\usepackage{graphicx}
+% Command for printing skill overview bubbles
+\newcommand\skills{ 
+~
+	\smartdiagram[bubble diagram]{
+        \textbf{Software}\\\textbf{Engineering},
+        \textbf{DevOps},
+        \textbf{~~~~~OOP~~~~~~},        
+        \textbf{Machine}\\\textbf{Learning Junior},        
+        \textbf{Backend}\\\textbf{Developer}
+    }
+}
+
+% Programming skill bars
+\programming{{C / 2},  {Golang $\textbullet$ JavaScript / 4},{Java $\textbullet$ Kotlin /6}}
+
+% Projects text
+\projects{
+\textbf{Golang store indexing system} - The system indexes the store products by its metadata to achieve more dynamic and faster searches, using a reverse indexer. 
+Manages a store's stock by notifying when a product is in short supply. Using the following technologies: Golang, Zinc Indexer, MongoDB, AWS. \\
+}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+\profilepic{alice.jpeg} %path of profile pic
+\cvname{Brayme Guaman} % Your name
+\cvjobtitle{ Software Engineer } % Job% title/career
+\cvlinkedin{/in/brayme-guamán-306404180}
+\cvgithub{shuraG}
+\cvnumberphone{(593) 984837059} % Phone number
+\cvmail{brayshu@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+    	{2010 - 2017}
+        {}
+        {Ing., Computer Science \textnormal{}}
+        {\href{http://www.ucuenca.edu.ec/}{University of Cuenca, Ecuador}}
+        {}
+	
+	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+\end{twenty}
+
+\section{Research}
+\begin{twenty}
+	\twentyitem
+    	{2016 - 2017}
+		{}
+        {Ing. Candidate, Graduate }
+        {\href{http:///www.ucuenca.edu.ec/}{University of Cuenca}}
+        {}
+        {
+       	\textbf{Thesis}: Análisis de rendimiento de un clúster HPC y, arquitecturas manycore y multicore.
+        {\begin{itemize}
+        \item Proposed the parallelization of algorithm from WRF(Weather Research and Forecasting) and running on GPU’s, Intel co-procesor and Cluster HPC
+        \item \textbf{Tools}: CUDA, OpenCl, MPI, C, CentOS Rocks HPC\vspace{2mm}
+		\end{itemize}}
+        }
+\end{twenty}
+
+\section{Publications}
+
+GUAMÁN, Brayme; SOLANO, Lizandro. WRF, análisis de rendimiento en clústeres HPC. Maskana, 2017, vol. 8, p. 403-412. \vspace{2mm}
+
+P. Contreras, B. Guamán, M. Saca, F. Sumba and M. Falconí, ”Measurement of height throught software developed for mobile devices for the growth control in children,” 2014 IEEE ANDESCON, Cochabamba, 2014, pp. 1-1.\vspace{2mm}
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{twenty} % Environment for a list with descriptions
+
+\twentyitem
+    {May 2022 -}
+    {Present}
+    {Senior Software Engineer}
+    {\href{https://www.ninjaone.com/about-us/}{NinjaOne LLC}}
+    {}
+    {
+        \begin{itemize}
+            \item
+            Member of the core team, where we design and develop horizontal features of great impact on the main product (General search engine of components and devices). Due to numerous requests, we focus on code optimization, database design in conjunction with the cache system, and bus cache to achieve high performance and reduce waiting times.
+         \end{itemize}
+         
+        \begin{itemize}
+            \item
+            The technologies used within the microservices architecture include Redis, RabbitMQ, PostgreSQL with Java 11, and Kotlin coroutines (async behavior).
+         \end{itemize}
+         
+         \begin{itemize}
+            \item
+            The entire stack is deployed on AWS cloud, using CI/CD tools such as Circle CI.
+         \end{itemize}
+    }
+    \\
+
+\twentyitem
+    {May 2021 -}
+    {May 2022}
+    {Software Engineer II}
+    {\href{https://tangocode.com/}{TangoCode LLC}}
+    {}
+    {
+        \begin{itemize}
+            \item Building pipelines with CodeShip, packaging processes with Gradle and Maven, and managing infrastructure using Serverless Framework. The packaging stage was optimized using AWS layers and small JARs instead of Uber JARs. Versioning of new JARs was automated with git tags and configured inside of CodeShip. Unit and integration testing were automated in the pipelines to avoid regressions.
+        \end{itemize}
+
+        \begin{itemize}
+            \item Designing and building an integration engine to connect to several ads platforms (Google Ads, Facebook Ads, etc.) from scratch on AWS using Java and Kotlin. The design was based on serverless architecture, data stores were deployed using containers (Docker) with EC2. Additionally, a system for managing load data and retrying errors was designed with AWS SQS.
+         \end{itemize}
+
+        \begin{itemize}
+            \item Development of tests following a TDD methodology, using JUnit, MockK, and Mockito tools to achieve 80% coverage. For the integration test design, we used container testing for DB, queues, and other system components using Docker.
+        \end{itemize}
+
+        \begin{itemize}
+            \item Mentoring in Java and Kotlin for new team members and entry-level developers.
+        \end{itemize}
+    }
+    \\
+
+\end{twenty}
+
+\begin{twentyla} % Environment for a list with descriptions
+\twentyitem
+    {April 2020 -}
+    {May 2021}
+    {Software Engineer}
+    {\href{https://www.rappi.com.ec/}{RAPPI Corporation}}
+    {}
+    {
+        \begin{itemize}
+            \item Development of a betting project working in different countries: Colombia and Mexico. Responsibilities included the management of payments, winnings, and notifications. The project involved designing an event-oriented microservices architecture, using KAFKA and ActiveMQ.
+         \end{itemize}
+
+        \begin{itemize}
+            \item The project was designed and developed using a microservices architecture and deployed with containers.
+         \end{itemize}
+
+        \begin{itemize}
+            \item Implementation of a cache system (Redis) to reduce waiting times for getting odds bets.
+         \end{itemize}
+
+        \begin{itemize}
+            \item Development was done with Kotlin, Spring framework, and reactive programming (ReactiveX) to achieve better performance.
+         \end{itemize}
+    }
+    \\
+
+\twentyitem
+    {June 2019 -}
+    {April 2020}
+    {DevOps and Software Engineer}
+    {\href{https://www.jardinazuayo.fin.ec/}{COAC Jardin Azuayo}}
+    {}
+    {
+        \begin{itemize}
+            \item Implemented a containers (Docker) architecture, using Docker Compose to automate local deployments. Designed Git Workflow and pipelines for CI/CD using Jenkins.
+         \end{itemize}
+
+        \begin{itemize}
+            \item Worked as a code reviewer, improving Java (Spring) applications and optimizing SQL. Also, refactored from Java using functional programming paradigms.
+         \end{itemize}
+
+        \begin{itemize}
+            \item Designed the system architecture for microservices and batch processes for an interchange of transactions between bank systems from scratch using Spring and Java 11.
+         \end{itemize}
+    }
+    \\
+
+\twentyitem
+    {Jan 2018 -}
+    {May 2019}
+    {Software Engineer}
+    {\href{http://www.softcase.com.ec/}{SoftCase}}
+    {}
+    {
+        \begin{itemize}
+            \item Designed a REST API for integrating several healthcare systems and sharing radiology images with the MirthConnect engine using the HL7 protocol.
+         \end{itemize}
+
+        \begin{itemize}
+            \item Worked as a backend developer using Java 8, building REST and SOAP APIs.
+          \end{itemize}
+    }
+    \\
+
+\twentyitem
+    {March 2017 -}
+    {August 2017}
+    {Junior Software Developer}
+    {\href{http://www.ucuenca.edu.ec/}{Universidad de Cuenca}}
+    {}
+    {
+        \begin{itemize}
+            \item Worked as a JAVA developer on municipal systems for the Program and Management of Water and Soil (PROMAS).
+        \end{itemize}
+    }
+    \\
+
+\end{twentyla}
+
+
+\end{document} 
