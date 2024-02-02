@@ -236,22 +236,23 @@
     \vspace{4mm}
     \profilesection{Skills}{4cm}
     
-    {\large \textbf{Overview}}
+    	%{\large \textbf{Overview}}
 
-	\skills
+	%\skills
         
         %------------------------------------------------
         
         \vspace{3mm}
        
-	 {\large \textbf{Programming}} 
+	{\large \textbf{Programming}} 
 
-		 \programming
+		\programming
          
-        \vspace{4mm}
-        \profilesection{Projects}{3cm} 
+      %  \vspace{4mm}
+       % \profilesection{Projects}{3cm} 
         
-        \projects
+      %  \projects
+        
       
   \end{textblock}
 }
