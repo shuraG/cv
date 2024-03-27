@@ -18,21 +18,16 @@
 %  }
 %}
 
+%----------------------------------------------------------------------------------------
 % Programming skill bars
-\programming{{C / 2},  {C++ $\textbullet$ JavaScript / 4},{Java $\textbullet$ GO (Golang) $\textbullet$ Kotlin /6}}
-
-% Projects text
-%\projects{
-%\textbf{Golang store indexing system} - The system indexes the store products by its metadata to achieve more dynamic and faster searches, using a reverse indexer. 
-%Manages a store's stock by notifying when a product is in short supply. Using the following technologies: Golang, Zinc Indexer, MongoDB, AWS. \\
-%}
+\programming{ {Java $\textbullet$ GO (Golang) $\textbullet$ Kotlin /6},{C++ $\textbullet$ JavaScript / 4}, {C / 2}}
 
 %----------------------------------------------------------------------------------------
 %	 PERSONAL INFORMATION
 %----------------------------------------------------------------------------------------
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 \profilepic{} %path of profile pic
-\cvname{Brayme Guaman} % Your name
+\cvname{Brayme Guaman}
 \cvjobtitle{ Software Engineer } % Job% title/career
 \cvlinkedin{/in/brayme/}
 \cvgithub{shuraG}
@@ -84,6 +79,135 @@ GUAMÁN, Brayme; SOLANO, Lizandro. WRF, análisis de rendimiento en clústeres H
 
 P. Contreras, B. Guamán, M. Saca, F. Sumba and M. Falconí, ”Measurement of height throught software developed for mobile devices for the growth control in children,” 2014 IEEE ANDESCON, Cochabamba, 2014, pp. 1-1.\vspace{2mm}
 
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{twenty} % Environment for a list with descriptions
+
+\twentyitem
+    {May 2022 -}
+    {Present}
+    {Senior Software Engineer}
+    {\href{https://www.ninjaone.com/about-us/}{NinjaOne LLC}}
+    {}
+    {
+        \begin{itemize}
+            \item
+            Member of the core team, where we design and develop horizontal features of direct impact on the main product. Due to numerous requests, and lot of stored data, our development features are focused on code optimization, database design in conjunction with the cache system(Redis), and bus (Rabbit MQ) to achieve high performance and reduce waiting times.
+         \end{itemize}
+         
+        \begin{itemize}
+            \item
+            Implemented an cache strategy in 2 levels, first per microservice instance, and second using Redis for the calculation of tree structures, reducing the waiting time in devices request by a factor of 10, for the clients which have large data.
+         \end{itemize}
+         
+    }
+    
+    \\
+    
+\twentyitem
+    {May 2021 -}
+    {May 2022}
+    {Software Engineer II}
+    {\href{https://tangocode.com/}{TangoCode LLC}}
+    {}
+    {
+    
+        \begin{itemize}
+            \item Designing and building an integration engine to connect to several ads platforms (Google Ads, Facebook Ads, etc.) from scratch on AWS using Java and Kotlin. The design was based on serverless architecture, data stores were deployed using containers (Docker) with EC2. Additionally, a system for managing load data and retrying errors was designed with AWS SQS.
+         \end{itemize}
+         
+        \begin{itemize}
+            \item Mentoring in Java and Kotlin for new team members and entry-level developers.
+        \end{itemize}
+         
+        \begin{itemize}
+            \item Building pipelines with CodeShip, packaging processes with Gradle and Maven, and managing infrastructure using Serverless Framework. The packaging stage was optimized using AWS layers and small JARs instead of Uber JARs. Versioning of new JARs was automated with git tags and configured inside of CodeShip.
+        \end{itemize}
+
+        \begin{itemize}
+            \item Successfully achieved an 80 percent coverage rate by implementing a design with SOLID principles (JUnit and MockK).
+        \end{itemize}
+
+
+    }
+    \\
+
+
+
+\end{twenty}
+
+
+\setNextPageGeometry{1cm}{2cm}{1cm}{0.1cm}
+
+\begin{twenty}
+
+\twentyitem
+    {April 2020 -}
+    {May 2021}
+    {Software Engineer}
+    {\href{https://www.rappi.com.ec/}{RAPPI Corporation}}
+    {}
+    {
+        \begin{itemize}
+            \item Development of a betting project working in different countries: Colombia and Mexico. Responsibilities included the management of payments, winnings, and notifications. The project involved designing an event-oriented microservices architecture, using KAFKA and ActiveMQ.
+         \end{itemize}
+
+        \begin{itemize}
+            \item Implementation of a cache system (Redis) to reduce waiting times for getting odds bets.
+         \end{itemize}
+
+        \begin{itemize}
+            \item Development was done with Kotlin, Spring framework, and reactive programming (ReactiveX) to achieve better performance.
+         \end{itemize}
+    }
+    \\
+
+\twentyitem
+    {June 2019 -}
+    {April 2020}
+    {DevOps and Software Engineer}
+    {\href{https://www.jardinazuayo.fin.ec/}{COAC Jardin Azuayo}}
+    {}
+    {
+        \begin{itemize}
+            \item Worked as a code reviewer, improving Java (Spring) applications and optimizing SQL. Also, refactored from Java using functional programming paradigms.
+         \end{itemize}
+
+        \begin{itemize}
+            \item Designed the system architecture for microservices and batch processes for an interchange of transactions between bank systems from scratch using Spring and Java 11.
+         \end{itemize}
+    }
+    \\
+
+\twentyitem
+    {Jan 2018 -}
+    {May 2019}
+    {Software Engineer}
+    {\href{http://www.softcase.com.ec/}{SoftCase}}
+    {}
+    {
+        \begin{itemize}
+            \item Designed a REST API for integrating several healthcare systems and sharing radiology images with the MirthConnect engine using the HL7 protocol. REST and SOAP building with JAVA 8.
+         \end{itemize}
+    }
+    \\
+
+
+
+\end{twenty}
+
+\begin{twentyla} % Environment for a list with descriptions
+
+\end{twentyla}
+
+
+
+
 %----------------------------------------------------------------------------------------
 %	 PROJECTS
 %----------------------------------------------------------------------------------------
@@ -101,13 +225,13 @@ P. Contreras, B. Guamán, M. Saca, F. Sumba and M. Falconí, ”Measurement of h
     
         \begin{itemize}
             \item
-	    Designed and developed a system with three components: an agent for sensor management, a server for processing payments, and an interface for sensor and payment control. Automated management of over 200 tolls. 
+	    Principal Engineer overseeing the development of a multi-component system comprising an agent for sensor management, a server for payment processing, and an interface for sensor and payment control. Successfully automated the management of over 200 tolls.
          \end{itemize}
          
         \begin{itemize}
             \item
             Developed the agent component to works offline, to control tolls, to achieve this a queue system using SQLite and Goroutines to manage events was used. 	Together with a Feature Flag system, to enable a direct connection between user interface and agent. Reduce the time to work manually to zero, avoiding money lost.
-         \end{itemize}
+         \end{itemize} 
          
          \begin{itemize}
             \item
@@ -144,171 +268,7 @@ P. Contreras, B. Guamán, M. Saca, F. Sumba and M. Falconí, ”Measurement of h
     }
     \\
     
-%         \twentyitem
-
-    
-%    {Golang store indexing system}
-%    {\href{}{}}
-%    {}
- %   {
-    
-  %      \begin{itemize}
-   %         \item
-%	    The system indexes the store products by its metadata to achieve more dynamic and faster searches, using a reverse indexer. 
-%Manages a store's stock by notifying when a product is in short supply.
- %        \end{itemize}
-         
-  %       \begin{itemize}
-   %         \item
-   %        Golang, Zinc Indexer, MongoDB, AWS.
-    %     \end{itemize}
-         
-   % }
-   % \\
-    
 \end{twenty}
-%----------------------------------------------------------------------------------------
-%	 EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\section{Experience}
-
-\begin{twenty} % Environment for a list with descriptions
-
-\twentyitem
-    {May 2022 -}
-    {Present}
-    {Senior Software Engineer}
-    {\href{https://www.ninjaone.com/about-us/}{NinjaOne LLC}}
-    {}
-    {
-        \begin{itemize}
-            \item
-            Member of the core team, where we design and develop horizontal features of direct impact on the main product. Due to numerous requests, and lot of stored data, our development features are focused on code optimization, database design in conjunction with the cache system(Redis), and bus (Rabbit MQ) to achieve high performance and reduce waiting times.
-         \end{itemize}
-         
-        \begin{itemize}
-            \item
-            Implemented an cache strategy in 2 levels, first per microservice instance, and second using Redis for the calculation of tree structures, reducing the waiting time in devices request by a factor of 10, for the clients which have large data. Using Kotlin coroutines to do part of the process asynchronously.
-         \end{itemize}
-         
-         
-        \begin{itemize}
-            \item
-            Developed core classes to improve the quality code and easier way to build integration testing (TestNG) for the rest of the team. Also I have increased the percentage coverage of the project from 30 to 40 percent by a re-desing class model with SOLID principles it give us a easy way to inject and use mocks with Mokk and JUnit .
-         \end{itemize}
-         
-    }
-    \\
-\end{twenty}
-
-\begin{twentyla} % Environment for a list with descriptions
-
-\twentyitem
-    {May 2021 -}
-    {May 2022}
-    {Software Engineer II}
-    {\href{https://tangocode.com/}{TangoCode LLC}}
-    {}
-    {
-        \begin{itemize}
-            \item Building pipelines with CodeShip, packaging processes with Gradle and Maven, and managing infrastructure using Serverless Framework. The packaging stage was optimized using AWS layers and small JARs instead of Uber JARs. Versioning of new JARs was automated with git tags and configured inside of CodeShip. Unit and integration testing were automated in the pipelines to avoid regressions.
-        \end{itemize}
-
-        \begin{itemize}
-            \item Designing and building an integration engine to connect to several ads platforms (Google Ads, Facebook Ads, etc.) from scratch on AWS using Java and Kotlin. The design was based on serverless architecture, data stores were deployed using containers (Docker) with EC2. Additionally, a system for managing load data and retrying errors was designed with AWS SQS.
-         \end{itemize}
-
-        \begin{itemize}
-            \item Development of tests following a TDD methodology, using JUnit, MockK, and Mockito tools to achieve 80% coverage. For the integration test design, we used container testing for DB, queues, and other system components using Docker.
-        \end{itemize}
-
-        \begin{itemize}
-            \item Mentoring in Java and Kotlin for new team members and entry-level developers.
-        \end{itemize}
-    }
-    \\
-
-
-
-
-\twentyitem
-    {April 2020 -}
-    {May 2021}
-    {Software Engineer}
-    {\href{https://www.rappi.com.ec/}{RAPPI Corporation}}
-    {}
-    {
-        \begin{itemize}
-            \item Development of a betting project working in different countries: Colombia and Mexico. Responsibilities included the management of payments, winnings, and notifications. The project involved designing an event-oriented microservices architecture, using KAFKA and ActiveMQ.
-         \end{itemize}
-
-        \begin{itemize}
-            \item The project was designed and developed using a microservices architecture and deployed with containers.
-         \end{itemize}
-
-        \begin{itemize}
-            \item Implementation of a cache system (Redis) to reduce waiting times for getting odds bets.
-         \end{itemize}
-
-        \begin{itemize}
-            \item Development was done with Kotlin, Spring framework, and reactive programming (ReactiveX) to achieve better performance.
-         \end{itemize}
-    }
-    \\
-
-\twentyitem
-    {June 2019 -}
-    {April 2020}
-    {DevOps and Software Engineer}
-    {\href{https://www.jardinazuayo.fin.ec/}{COAC Jardin Azuayo}}
-    {}
-    {
-        \begin{itemize}
-            \item Implemented a containers (Docker) architecture, using Docker Compose to automate local deployments. Designed Git Workflow and pipelines for CI/CD using Jenkins.
-         \end{itemize}
-
-        \begin{itemize}
-            \item Worked as a code reviewer, improving Java (Spring) applications and optimizing SQL. Also, refactored from Java using functional programming paradigms.
-         \end{itemize}
-
-        \begin{itemize}
-            \item Designed the system architecture for microservices and batch processes for an interchange of transactions between bank systems from scratch using Spring and Java 11.
-         \end{itemize}
-    }
-    \\
-
-\twentyitem
-    {Jan 2018 -}
-    {May 2019}
-    {Software Engineer}
-    {\href{http://www.softcase.com.ec/}{SoftCase}}
-    {}
-    {
-        \begin{itemize}
-            \item Designed a REST API for integrating several healthcare systems and sharing radiology images with the MirthConnect engine using the HL7 protocol.
-         \end{itemize}
-
-        \begin{itemize}
-            \item Worked as a backend developer using Java 8, building REST and SOAP APIs.
-          \end{itemize}
-    }
-    \\
-
-%\twentyitem
-%    {March 2017 -}
-%    {August 2017}
-%    {Junior Software Developer}
-%    {\href{http://www.ucuenca.edu.ec/}{Universidad de Cuenca}}
-%    {}
-%    {
-%        \begin{itemize}
-%            \item Worked as a JAVA developer on municipal systems for the Program and Management of Water and Soil (PROMAS).
-%        \end{itemize}
-%    }
-%    \\
-
-\end{twentyla}
 
 
 \end{document} 

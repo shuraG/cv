@@ -128,10 +128,10 @@
 \setlength{\TPHorizModule}{1cm} % Left margin
 \setlength{\TPVertModule}{1cm} % Top margin
 
-\newlength\imagewidth
-\newlength\imagescale
-\pgfmathsetlength{\imagewidth}{5cm}
-\pgfmathsetlength{\imagescale}{\imagewidth/600}
+%\newlength\imagewidth
+%\newlength\imagescale
+%\pgfmathsetlength{\imagewidth}{5cm}
+%\pgfmathsetlength{\imagescale}{\imagewidth/600}
 
 \newcommand{\profilesection}[2]{\vspace{8pt}{\color{black!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
 
@@ -154,11 +154,27 @@
 \newcommand\programming[1]{ 
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
+       % 	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
+				
 			\foreach [count=\i] \x/\y in {#1}{
-				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
-				\node [above right] at (0,\i+0.35) {\x};
+				\ifnum\i=1
+					\draw[fill=maingray,maingray] (0,0) rectangle (6,0.4);
+					\draw[fill=white,mainblue](0,0) rectangle (\y,0.4);
+					\node [above right] at (0,0.35) {\x};
+				\fi
+				
+				\ifnum\i=2
+					\draw[fill=maingray,maingray] (7,0) rectangle (7+6,0.4);
+					\draw[fill=white,mainblue](7,0) rectangle (7+\y,0.4);
+					\node [above right] at (7, 0.35) {\x};
+				\fi
+				
+				\ifnum\i=3
+					\draw[fill=maingray,maingray] (14,0) rectangle (14+6,0.4);
+					\draw[fill=white,mainblue](14,0) rectangle (14+\y,0.4);
+					\node [above right] at (14, 0.35) {\x};
+				\fi
+				
 			}
 		\end{tikzpicture}
 	}
@@ -174,67 +190,95 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\makeprofile}{
-  \begin{tikzpicture}[remember picture,overlay]
-      \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
-  \end{tikzpicture}
+%  \begin{tikzpicture}[remember picture,overlay]
+ %     \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+ % \end{tikzpicture}
 
   %------------------------------------------------
 
-  \begin{textblock}{6}(0.5, 0.2)
-
-    %------------------------------------------------
-    
-        \vspace{4mm}
-    {\Huge\color{pblue}\cvname}
-    
-    \vspace{2mm}
-
-    %------------------------------------------------
-    
-    {\Large\color{black!80}\cvjobtitle}
+  \begin{textblock}{20}(0.5, 0.2)
 
     %------------------------------------------------
     
     \vspace{4mm}
+    {
+    \Huge\color{pblue}\cvname    %\vspace{2mm} \Large\color{black!80}\cvjobtitle
+    }
+    
+
+    %------------------------------------------------
+    
+    %{\Large\color{black!80}\cvjobtitle}
+
+    %------------------------------------------------
+    
+    \vspace{3mm}
+
+ 
     \renewcommand{\arraystretch}{2}
-    \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
-      \ifthenelse{\equal{\cvnumberphone}{}}{}{
-      		{$
+    \begin{tabular}{
+    p{1cm} @{\hskip 0.5cm}p{3cm}  
+    p{1cm} @{\hskip 0.5cm}p{3.2cm}  
+    p{1cm} @{\hskip 0.5cm}p{2cm}
+    p{1cm} @{\hskip 0.5cm}p{3cm}
+    }
+     
+      	    {$
               \begin{array}{l}
               \hspace{4mm} \Huge \textnormal{\faMobile} 
               \end{array}
               $} 
-            & \cvnumberphone\\}
-            
- 
-      \ifthenelse{\equal{\cvmail}{}}{}{
-            {$
+            & \cvnumberphone
+           &  {$
               \begin{array}{l}
               \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
               \end{array}
               $} 
-            & \href{mailto:\cvmail}{\cvmail} \\}
-      
-       \ifthenelse{\equal{\cvlinkedin}{}}{}{
-            {$
+            & \cvmail
+           &  {$
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
               \end{array}
-              $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
-            }  
-        \ifthenelse{\equal{\cvgithub}{}}{}{
-            {$
+              $} 
+            & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin}
+           &  {$
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\faGithub}
               \end{array}
-              $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
-            }   
+              $} 
+            & \href{https://www.github.com/\cvgithub}{\cvgithub}
+            \\
+            
+            
+ 
+ %     \ifthenelse{\equal{\cvmail}{}}{}{
+ %           {$
+ %             \begin{array}{l}
+ %             \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
+ %             \end{array}
+ %             $} 
+  %          & \href{mailto:\cvmail}{\cvmail} \\}
+      
+  %     \ifthenelse{\equal{\cvlinkedin}{}}{}{
+  %          {$
+  %            \begin{array}{l}
+  %            \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
+  %            \end{array}
+   %           $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
+  %          }  
+   %     \ifthenelse{\equal{\cvgithub}{}}{}{
+  %          {$
+   %           \begin{array}{l}
+   %           \hspace{3mm} \huge \textnormal{\faGithub}
+   %           \end{array}
+   %           $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
+    %        }   
             
     \end{tabular}
 
     %------------------------------------------------
-    \vspace{4mm}
-    \profilesection{Skills}{4cm}
+ %   \vspace{4mm}
+%    \profilesection{Skills}{4cm}
     
     	%{\large \textbf{Overview}}
 
@@ -276,7 +320,7 @@
 
 \renewcommand{\section}[1]{
   \par\vspace{\parskip}
-	{%
+	{
 		\LARGE\headingfont\color{headercolor}%
 		\@sectioncolor #1%
 	}
@@ -361,8 +405,11 @@
 %	 MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
 
-\RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.1cm,nohead,nofoot]{geometry}
+\RequirePackage[left=1cm,top=6cm,right=1cm,bottom=0.1cm,nohead,nofoot]{geometry}
 
+\newcommand{\setNextPageGeometry}[4]{%
+    \newgeometry{left=#1,top=#2,right=#3,bottom=#4,nohead,nofoot}%
+}
 
 \usepackage{smartdiagram}
 \smartdiagramset{
